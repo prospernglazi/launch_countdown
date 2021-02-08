@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+:root {
+	--grayish-blue: #8385a9;
+	--soft-red: #fa5f86;
+	--white: #ffffff;
+	--desaturated-blue: #343650;
+	--dark-blue: #1d1e29;
+	--very-dark-blue: #191a23;
+}
+
+* {
+	margin: 0;
+	position: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100vh;
+	font-family: 'Red Hat Text';
+	background: linear-gradient(
+		to bottom,
+		var(--dark-blue) 10%,
+		var(--soft-red) 1000%
+	);
+}
+
+body::before {
+	position: absolute;
+	content: '';
+	background-image: url('../assets/icons/bg-stars.svg');
+	background-size: contain;
+	width: 100%;
+	height: 100vh;
+	z-index: -2;
+}
+
+body::after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100vh;
+	background-image: url('../assets/icons/pattern-hills.svg');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: -1;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	font-weight: normal;
+}
+
+.content__title {
+	font-size: 1.2rem;
+}
+
+.content__timer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.content__timer__display {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 130px;
+	height: 120px;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	background-color: var(--desaturated-blue);
+	border-radius: 10px;
+	box-shadow: 0px 10px var(--very-dark-blue);
+	overflow: hidden;
+}
+
+.content__timer__display::before,
+.content__timer__display::after {
+	position: absolute;
+	content: '';
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: var(--very-dark-blue);
+}
+
+.content__timer__display::before {
+	left: -10px;
+}
+
+.content__timer__display::after {
+	right: -10px;
+}
+
+.content__timer__display__upper-flap {
+	background: linear-gradient(
+		to bottom,
+		var(--desaturated-blue) 95%,
+		var(--dark-blue) 100%
+	);
+	border-width: 2px 0 0 0;
+	border-color: rgba(255, 255, 255, 0.116);
+	border-style: solid;
+	border-radius: 10px 10px 0 0;
+	height: 100%;
+}
+
+.content__timer__display__value {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 4rem;
+	color: var(--soft-red);
+}
+
+.content__timer__display__bottom-flap {
+	background: linear-gradient(
+		to top,
+		var(--desaturated-blue) 95%,
+		rgba(255, 255, 255, 0.164) 100%
+	);
+	border-radius: 0 0 10px 10px;
+	height: 100%;
+}
+
+.content__timer__title {
+	font-size: 0.7rem;
+	opacity: 0.5;
+}
+
+footer {
+	position: relative;
+	margin: 50px 0;
+}
+
+.footer__nav {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	gap: 40px;
+}
+
+.footer__nav__item {
+	cursor: pointer;
+}
