@@ -14,8 +14,6 @@ const updateTimer = setInterval(() => {
 	let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 	let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-	console.log(hours);
-
 	if (days <= 9 || hours <= 9 || minutes <= 9 || seconds <= 9) {
 		daysLeft.innerHTML = days.toString().padStart(2, 0);
 		hoursLeft.innerHTML = hours.toString().padStart(2, 0);
@@ -34,6 +32,7 @@ const updateTimer = setInterval(() => {
 		hoursLeft.innerHTML = '';
 		minutesLeft.innerHTML = '';
 		secondsLeft.innerHTML = '';
-		document.getElementById('content__heading').innerHTML = 'TIME UP!!';
+		document.getElementById('content__heading').innerHTML =
+			'ITS CHRISTMAS TIME!!';
 	}
 }, 1000);
