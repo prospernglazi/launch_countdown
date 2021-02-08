@@ -29,25 +29,24 @@ body {
 	);
 }
 
-body::before {
+body::before,
+body::after {
 	position: absolute;
 	content: '';
-	background-image: url('../assets/icons/bg-stars.svg');
 	background-size: contain;
 	width: 100%;
 	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+body::before {
+	background-image: url('../assets/images/bg-stars.svg');
 	z-index: -2;
 }
 
 body::after {
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 100vh;
-	background-image: url('../assets/icons/pattern-hills.svg');
-	background-position: bottom;
-	background-repeat: no-repeat;
-	background-size: contain;
+	background-image: url('../assets/images/pattern-hills.svg');
 	z-index: -1;
 }
 
@@ -63,25 +62,29 @@ body::after {
 	font-weight: normal;
 }
 
-.content__title {
+.content__heading {
 	font-size: 1.2rem;
 }
 
 .content__timer {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	gap: 10px;
+	gap: 30px;
 }
 
-.content__timer__display {
+.timer__unit {
+	text-align: center;
+}
+
+.unit__face {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	min-width: 130px;
 	height: 120px;
-	font-size: 2rem;
+	font-size: 4rem;
 	margin-bottom: 20px;
 	background-color: var(--desaturated-blue);
 	border-radius: 10px;
@@ -89,8 +92,8 @@ body::after {
 	overflow: hidden;
 }
 
-.content__timer__display::before,
-.content__timer__display::after {
+.unit__face::before,
+.unit__face::after {
 	position: absolute;
 	content: '';
 	width: 20px;
@@ -99,15 +102,21 @@ body::after {
 	background-color: var(--very-dark-blue);
 }
 
-.content__timer__display::before {
+.unit__face::before {
 	left: -10px;
 }
 
-.content__timer__display::after {
+.unit__face::after {
 	right: -10px;
 }
 
-.content__timer__display__upper-flap {
+.face__top,
+.face__bottom {
+	width: 100%;
+}
+
+.face__top {
+	background-color: #fff;
 	background: linear-gradient(
 		to bottom,
 		var(--desaturated-blue) 95%,
@@ -120,16 +129,15 @@ body::after {
 	height: 100%;
 }
 
-.content__timer__display__value {
+.face__value {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 4rem;
 	color: var(--soft-red);
 }
 
-.content__timer__display__bottom-flap {
+.face__bottom {
 	background: linear-gradient(
 		to top,
 		var(--desaturated-blue) 95%,
@@ -139,10 +147,11 @@ body::after {
 	height: 100%;
 }
 
-.content__timer__title {
+.timer__title {
 	font-size: 0.7rem;
 	opacity: 0.5;
 }
+/***************** FOOTER STYLES ************************/
 
 footer {
 	position: relative;

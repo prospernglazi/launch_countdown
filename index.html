@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
-    <script defer src="src/index.js"></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
+	<head>
+		<title>Parcel Sandbox</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="index.js"></script>
+	</head>
 
-  <body>
-    <header class="header">
-      <nav></nav>
-    </header>
-    <main class="content">
-      <h1 class="content__title">We're launching soon</h1>
-      <div class="content__timer">
-        <div class="content__timer__display">
-          <div class="content__timer__display__upper-flap"></div>
-          <p id="day" class="content__timer__display__value">00</p>
-          <div class="content__timer__display__bottom-flap"></div>
-        </div>
-        <p class="content__timer__title">Days</p>
-      </div>
-  
-      </div>
-    </main>
-    <footer class="footer">
-      <ul class="footer__nav">
-        <li class="footer__nav__item">
-          <a href="#" class="footer__nav__item__link">
-            <img src="./assets/icons/icon-facebook.svg" alt="facebook-icon" />
-          </a>
-        </li>
-        <li class="footer__nav__item">
-          <a href="#" class="footer__nav__item__link">
-            <img src="./assets/icons/icon-pinterest.svg" alt="pinterest-icon" />
-          </a>
-        </li>
-        <li class="footer__nav__item">
-          <a href="#" class="footer__nav__item__link">
-            <img src="./assets/icons/icon-instagram.svg" alt="instagram-icon" />
-          </a>
-        </li>
-      </ul>
-    </footer>
-  </body>
+	<body>
+		<header class="navbar">
+			<nav class="navbar__nav"></nav>
+		</header>
+		<main class="content">
+			<h1 id="content__heading" class="content__heading">
+				We're launching soon
+			</h1>
+			<section class="content__timer">
+				<article class="timer__unit">
+					<div class="unit__face">
+						<div class="face__top"></div>
+						<p id="unit--day" class="face__value">00</p>
+						<div class="face__bottom"></div>
+					</div>
+					<p class="timer__title">Days</p>
+				</article>
+				<article class="timer__unit">
+					<div class="unit__face">
+						<div class="face__top"></div>
+						<p id="unit--hours" class="face__value">00</p>
+						<div class="face__bottom"></div>
+					</div>
+					<p class="timer__title">Hours</p>
+				</article>
+				<article class="timer__unit">
+					<div class="unit__face">
+						<div class="face__top"></div>
+						<p id="unit--minutes" class="face__value">00</p>
+						<div class="face__bottom"></div>
+					</div>
+					<p class="timer__title">Minutes</p>
+				</article>
+				<article class="timer__unit">
+					<div class="unit__face">
+						<div class="face__top"></div>
+						<p id="unit--seconds" class="face__value">00</p>
+						<div class="face__bottom"></div>
+					</div>
+					<p class="timer__title">Seconds</p>
+				</article>
+			</section>
+		</main>
+		<footer class="footer">
+			<ul class="footer__nav">
+				<li class="footer__nav__item">
+					<a href="#" class="footer__nav__item__link">
+						<img src="./assets/icons/icon-facebook.svg" alt="facebook-icon" />
+					</a>
+				</li>
+				<li class="footer__nav__item">
+					<a href="#" class="footer__nav__item__link">
+						<img src="./assets/icons/icon-pinterest.svg" alt="pinterest-icon" />
+					</a>
+				</li>
+				<li class="footer__nav__item">
+					<a href="#" class="footer__nav__item__link">
+						<img src="./assets/icons/icon-instagram.svg" alt="instagram-icon" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
 </html>
